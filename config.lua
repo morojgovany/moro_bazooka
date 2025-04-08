@@ -1,0 +1,2 @@
+Config = {}
+Config.command = 'bazooka'
