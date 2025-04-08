@@ -1,6 +1,19 @@
 local bazookaFiring = false
 local bazookaObject = nil
 
+function LoadModel(model)
+    if IsModelInCdimage(model) then
+        RequestModel(model)
+        while not HasModelLoaded(model) do
+            Wait(100)
+        end
+        return true
+    else
+        print('Error: Model does not exist: ' .. model)
+        return false
+    end
+end
+
 RegisterNetEvent('moro_bazooka:syncBazooka')
 AddEventHandler('moro_bazooka:syncBazooka', function(player, coords, create)
     local playerFromSrv = GetPlayerFromServerId(player)
