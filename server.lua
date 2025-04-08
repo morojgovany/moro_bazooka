@@ -2,13 +2,8 @@ local bazookaInUse = false
 
 RegisterCommand(Config.command, function(source, args, raw)
     local _source = source
-    local Character = VorpCore.getUser(_source).getUsedCharacter
-
-    if Character.group == 'admin' and not bazookaInUse then
-        TriggerClientEvent('moro_bazooka:startBazooka', _source)
-        bazookaInUse = true
-    end
-end)
+    TriggerClientEvent('moro_bazooka:startBazooka', _source)
+end, Config.adminCheck)
 
 RegisterServerEvent("moro_bazooka:syncBazooka")
 AddEventHandler("moro_bazooka:syncBazooka", function(create)
