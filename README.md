@@ -6,3 +6,5 @@ So I made a quick fix to share it between clients.
 Fell free to share / modify or improve this.
 
 https://youtu.be/iJsaJ-Bfkfk
+
+Support will be limitated depending of my available time, but you can open an issue and I'll try to fix/improve things.
