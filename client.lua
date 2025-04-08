@@ -33,7 +33,7 @@ AddEventHandler('moro_bazooka:startBazooka', function()
 
         Citizen.CreateThread(function()
             while bazookaFiring do
-                DisableControlAction(0, 0x4AF4D473, true) --disable DEL here
+                DisableControlAction(0, Config.disableCancelAnimationKey, true) --disable cancel anim key
                 Citizen.Wait(1)
                 if IsControlJustReleased(0, 0x07CE1E61) then
                     local position = GetEntityCoords(playerPed)
